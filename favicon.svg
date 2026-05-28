@@ -1,0 +1,6 @@
+<svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="26,4 46,15 46,37 26,48 6,37 6,15" fill="none" stroke="#1d3557" stroke-width="1.5"/>
+  <polygon points="26,10 40,19 40,33 26,42 12,33 12,19" fill="none" stroke="#1d3557" stroke-width="1" opacity="0.35"/>
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Inter, sans-serif" font-weight="800" font-size="13" fill="#111111">kG</text>
+</svg>

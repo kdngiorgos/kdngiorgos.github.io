@@ -1,116 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giorgos Kandilas | kdngiorgos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giorgos Kandilas — Freelance IT Engineer</title>
+  <meta name="description" content="Giorgos Kandilas — freelance IT engineer based in Patras, Greece. Security administration, cloud & web migration, and CS & programming tutoring.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://kdngiorgos.github.io/">
+  <meta property="og:title"       content="Giorgos Kandilas — Freelance IT Engineer">
+  <meta property="og:description" content="Security administration, cloud & web migration, CS & programming tutoring. Based in Patras, Greece.">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Giorgos Kandilas — Freelance IT Engineer">
+  <meta name="twitter:description" content="Security administration, cloud & web migration, CS & programming tutoring. Based in Patras, Greece.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon"          href="favicon.svg">
+  <meta name="theme-color" content="#faf9f6">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Georgios Kandilas",
+    "alternateName": "Giorgos Kandilas",
+    "url": "https://kdngiorgos.github.io",
+    "email": "kdngiorgos@gmail.com",
+    "jobTitle": "Freelance IT Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Patras", "addressCountry": "GR" },
+    "sameAs": ["https://github.com/kdngiorgos", "https://linkedin.com/in/kdngiorgos/"],
+    "knowsAbout": ["Cybersecurity", "Cloud Migration", "Web Hosting", "IT Administration", "Computer Science Tutoring", "Linux", "Penetration Testing"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">kdngiorgos<span class="cursor">_</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">01. About</a></li>
-                <li><a href="#projects">02. Projects</a></li>
-                <li><a href="#contact">03. Contact</a></li>
-            </ul>
-        </nav>
 
-        <header class="hero">
-            <p class="hi">Hi, my name is</p>
-            <h1 class="name">Giorgos Kandilas.</h1>
-            <h2 class="subtitle">I like computers</h2>
-            <p class="description">
-                I'm a Computer Engineering student and Cybersecurity enthusiast. 
-            </p>
-            
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Looking for Internship Opportunities
-            </div>
+<!-- ── Nav ───────────────────────────────── -->
+<header id="navbar" role="banner">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home">Giorgos Kandilas</a>
 
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary">Get In Touch</a>
-                <a href="https://github.com/kdngiorgos" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </header>
+    <ul class="nav-links" role="list">
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#work"     class="nav-link">Work</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+    </ul>
 
-        <section id="about" class="section">
-            <h3 class="section-title"><span>01.</span> About Me</h3>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Hello! I'm Giorgos, also known as <span class="highlight">kdngiorgos</span>. I enjoy exploring the depths of computer systems and understanding how they work at a low level.
-                    </p>
-                    <p>
-                        Currently, I am pursuing my degree in <strong>Computer Engineering</strong> while actively self-studying <strong>Cybersecurity</strong>. My goal is to bridge the gap between software development and security engineering.
-                    </p>
-                    <p>Here are some technologies and topics I've been working with recently:</p>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-caret-right"></i> Python & C/C++</li>
-                        <li><i class="fas fa-caret-right"></i> Linux Administration</li>
-                        <li><i class="fas fa-caret-right"></i> Full-Stack Development</li>
-                        <li><i class="fas fa-caret-right"></i> Homelabbing</li>
-                    </ul>
-                </div>
-                <div class="about-img">
-                    <div class="img-wrapper">
-                        <!-- Placeholder for profile image, using a techy icon for now -->
-                        <i class="fas fa-user-secret profile-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <a href="#contact" class="btn btn-primary btn-sm">Get in touch</a>
 
-        <section id="projects" class="section">
-            <h3 class="section-title"><span>02.</span> Some Things I've Built So Far</h3>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-top">
-                        <i class="far fa-folder folder-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/demetraapp/demetraapp" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h4 class="project-title">Demetra App</h4>
-                    <div class="project-desc">
-                        <p>A full-stack web application designed for farmers and agronomists to monitor field data and get crop recommendations</p>
-                    </div>
-                    <ul class="project-tech">
-                        <li>NodeJS FrontEnd</li>
-                        <li>Python Backend</li>
-                        <li>MongoDB Database</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <button class="hamburger" id="hamburger"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        <section id="contact" class="section contact-section">
-            <h3 class="section-title"><span>03.</span> What's Next?</h3>
-            <h2 class="contact-title">Get In Touch</h2>
-            <p class="contact-desc">
-                I am currently looking for <strong>Internship opportunities</strong>. Whether you have a question, a job offer, or just want to say hi, I'll try my best to get back to you!
-            </p>
-            <a href="mailto:kdngiorgos@gmail.com" class="btn primary big-btn">Say Hello</a>
-            
-            <div class="social-links">
-                <a href="https://github.com/kdngiorgos" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kdngiorgos/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/kdngiorgos/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </section>
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about"    class="mobile-nav-link">About</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#work"     class="mobile-nav-link">Work</a></li>
+      <li><a href="#contact"  class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">Get in touch</a>
+  </div>
+</header>
 
-        <footer>
-            <p>Designed & Built by Giorgos Kandilas</p>
-        </footer>
+<main>
+
+  <!-- ── Hero ─────────────────────────────── -->
+  <section id="hero" aria-label="Introduction">
+    <div class="container hero-content">
+      <p class="hero-eyebrow mono">Freelance IT Engineer &middot; Patras, Greece</p>
+      <h1 class="hero-heading">Security, infrastructure,<br>and software &mdash; done right.</h1>
+      <p class="hero-sub">
+        I help small businesses and teams secure their systems, move to the cloud,
+        and get unstuck on the technical work that matters.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
+        <a href="#work"    class="btn btn-outline btn-lg">See selected work</a>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ── Services ──────────────────────────── -->
+  <section id="services" class="section section-alt" aria-label="Services">
+    <div class="container">
+      <p class="section-label reveal"><span class="mono">Services</span></p>
+      <h2 class="section-heading reveal">What I do</h2>
+      <div class="services-grid">
+
+        <article class="service-card reveal">
+          <div class="svc-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></div>
+          <h3 class="svc-title">Security Administration</h3>
+          <p class="svc-desc">
+            System hardening, helpdesk workflow design, IT admin support, and security
+            documentation. I evaluate your current setup, surface the gaps, and put
+            policies and tooling in place that actually hold.
+          </p>
+          <ul class="svc-tags" role="list">
+            <li>IT Admin</li>
+            <li>Security Audits</li>
+            <li>Workflow Design</li>
+            <li>Documentation</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="svc-icon" aria-hidden="true"><i class="fas fa-cloud-arrow-up"></i></div>
+          <h3 class="svc-title">Cloud &amp; Web Migration</h3>
+          <p class="svc-desc">
+            Moving sites, services, and small infrastructure off aging hosting onto
+            managed cloud. I handle the technical migration end-to-end &mdash; DNS,
+            redirects, server config, testing &mdash; so nothing breaks and nothing
+            gets left behind.
+          </p>
+          <ul class="svc-tags" role="list">
+            <li>Cloud Hosting</li>
+            <li>Website Migration</li>
+            <li>DNS &amp; Infra</li>
+            <li>Linux</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="svc-icon" aria-hidden="true"><i class="fas fa-chalkboard-user"></i></div>
+          <h3 class="svc-title">CS &amp; Programming Tutoring</h3>
+          <p class="svc-desc">
+            One-on-one tutoring for high school and university students. Programming
+            fundamentals, algorithms, data structures, and exam preparation &mdash;
+            taught clearly, at whatever pace the student needs.
+          </p>
+          <ul class="svc-tags" role="list">
+            <li>Python</li>
+            <li>C / C++</li>
+            <li>Algorithms</li>
+            <li>Exam Prep</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────── -->
+  <section id="about" class="section" aria-label="About me">
+    <div class="container">
+      <p class="section-label reveal"><span class="mono">About</span></p>
+      <h2 class="section-heading reveal">Who I am</h2>
+      <div class="about-grid">
+
+        <div class="about-photo-wrap reveal">
+          <img src="me.jpg" alt="Giorgos Kandilas" class="about-photo" loading="lazy">
+        </div>
+
+        <div class="about-body reveal">
+          <p>
+            I'm Giorgos, a Computer Engineering student at
+            <strong>CEID, University of Patras</strong> (3rd year, 8.7&thinsp;/&thinsp;10 GPA)
+            and an independent IT engineer. I take on client work in security
+            administration, cloud infrastructure, and CS tutoring &mdash; remotely
+            and on-site in Patras.
+          </p>
+          <p>
+            I coordinate the <strong>Cybersecurity SIG</strong> at our ACM Student
+            Chapter, compete in CTFs on Hack The Box, and run a homelab for
+            real-world systems practice. In 2026 I placed <strong>2nd nationally</strong>
+            at the <strong>Cybersecurity Challenge Greece</strong>.
+          </p>
+          <p>
+            I like problems where the technical detail matters. Whether that's locking
+            down a helpdesk configuration, wiring up a cloud migration without breaking
+            live traffic, or explaining recursion until it actually clicks &mdash;
+            I take the time to get it right.
+          </p>
+
+          <div class="about-creds" aria-label="Credentials">
+            <div class="cred">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              <span>CEID, University of Patras &middot; 8.7&thinsp;/&thinsp;10 GPA</span>
+            </div>
+            <div class="cred">
+              <i class="fas fa-trophy" aria-hidden="true"></i>
+              <span>2nd Nationally &middot; Cybersecurity Challenge Greece 2026</span>
+            </div>
+            <div class="cred">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <span>ACM Cybersecurity SIG Coordinator</span>
+            </div>
+          </div>
+
+          <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+            Download CV ↗
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Selected Work ─────────────────────── -->
+  <section id="work" class="section section-alt" aria-label="Selected work">
+    <div class="container">
+      <p class="section-label reveal"><span class="mono">Work</span></p>
+      <h2 class="section-heading reveal">Selected projects</h2>
+      <div class="work-list">
+
+        <article class="work-item reveal">
+          <div class="work-meta">
+            <span class="work-client">Sacred Byte GmbH</span>
+            <span class="work-period mono">Apr &ndash; May 2026 &middot; Remote</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">Security Administration &amp; Helpdesk Systems</h3>
+            <p class="work-desc">
+              Led a structured evaluation of helpdesk platforms (Freshdesk, Zoho Desk)
+              for Sacred Byte's internal operations. Wrote technical documentation covering
+              platform capabilities, security posture, and integration requirements.
+              Designed support workflows and liaised with vendors to inform the final
+              platform selection. Delivered a clear recommendation the client could
+              take directly into their procurement process.
+            </p>
+            <ul class="work-tags" role="list">
+              <li>IT Administration</li>
+              <li>Security</li>
+              <li>Technical Writing</li>
+              <li>Workflow Design</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-meta">
+            <span class="work-client">Smart Ads OE</span>
+            <!-- TODO: confirm and replace the date range -->
+            <span class="work-period mono">2025 &ndash; 2026</span>
+          </div>
+          <div class="work-body">
+            <!-- TODO: replace [cloud platform] with the actual provider (e.g. Hetzner, Cloudflare Pages, AWS Lightsail) -->
+            <h3 class="work-title">Cloud Migration &middot; 10+ Websites</h3>
+            <p class="work-desc">
+              Migrated a portfolio of 10+ production websites from legacy shared hosting
+              to [cloud platform]. Handled DNS cutover, server configuration, SSL
+              certificates, redirect maps, and post-migration smoke testing for each
+              property. Cutovers were scheduled outside peak traffic windows to keep
+              customer-visible disruption minimal.
+            </p>
+            <ul class="work-tags" role="list">
+              <!-- TODO: update tags to reflect the actual tech stack used -->
+              <li>Cloud Hosting</li>
+              <li>Website Migration</li>
+              <li>DNS</li>
+              <li>Linux</li>
+              <li>SSL/TLS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-meta">
+            <span class="work-client">Independent</span>
+            <span class="work-period mono">2024 &ndash; present</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">CS &amp; Programming Tutoring</h3>
+            <p class="work-desc">
+              One-on-one tutoring for high school and university students in programming
+              fundamentals, algorithms, data structures, and exam preparation. Subjects
+              covered include Python, C/C++, discrete mathematics, and compiler theory.
+              Format is adaptive &mdash; pace and depth adjust to what the student
+              needs, not a fixed curriculum.
+            </p>
+            <ul class="work-tags" role="list">
+              <li>Python</li>
+              <li>C / C++</li>
+              <li>Algorithms</li>
+              <li>Data Structures</li>
+              <li>Exam Prep</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────── -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="container">
+      <p class="section-label reveal"><span class="mono">Contact</span></p>
+      <h2 class="section-heading reveal">Get in touch</h2>
+      <p class="contact-lead reveal">
+        If you have a project in mind or just want to ask a question, email is the
+        best way to reach me. I usually reply within one business day.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-col reveal">
+          <h3 class="contact-col-title mono">Reach me at</h3>
+          <ul class="contact-list" role="list">
+            <li>
+              <a href="mailto:kdngiorgos@gmail.com" class="contact-item">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>kdngiorgos@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: replace href and display text with real phone number -->
+              <a href="tel:+30XXXXXXXXXX" class="contact-item">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span>+30 [phone pending]</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/kdngiorgos/" target="_blank" rel="noopener" class="contact-item">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span>linkedin.com/in/kdngiorgos</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kdngiorgos" target="_blank" rel="noopener" class="contact-item">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span>github.com/kdngiorgos</span>
+              </a>
+            </li>
+          </ul>
+          <a href="resume.pdf" class="btn btn-outline contact-cv" target="_blank" rel="noopener">
+            Download CV ↗
+          </a>
+        </div>
+
+        <div class="contact-col reveal">
+          <h3 class="contact-col-title mono">Business information</h3>
+          <dl class="biz-info mono">
+            <dt>Name</dt>
+            <dd>Georgios Kandilas</dd>
+            <dt>Location</dt>
+            <dd>Patras, Greece</dd>
+            <dt>ΑΦΜ&thinsp;/&thinsp;VAT</dt>
+            <!-- TODO: replace with real ΑΦΜ number once available -->
+            <dd>[ΑΦΜ pending]</dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container footer-inner">
+    <p class="footer-credit mono">
+      &copy;&thinsp;<span id="yr"></span> Georgios Kandilas &middot; Freelance IT Engineer
+    </p>
+    <p class="footer-legal mono">
+      <!-- TODO: replace with real ΑΦΜ -->
+      ΑΦΜ:&thinsp;[pending] &middot; Patras, Greece
+    </p>
+    <div class="footer-icons">
+      <a href="https://github.com/kdngiorgos"       target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://linkedin.com/in/kdngiorgos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:kdngiorgos@gmail.com"          aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
