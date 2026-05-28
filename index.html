@@ -1,116 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giorgos Kandilas | kdngiorgos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giorgos Kandilas — Security Engineer</title>
+  <meta name="description" content="Giorgos Kandilas — 3rd-year Computer Engineering student at University of Patras, Cybersecurity SIG Coordinator, CTF competitor. Available for Summer 2026 security engineering internships in SF.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://kdngiorgos.github.io/">
+  <meta property="og:title"       content="Giorgos Kandilas — Security Engineer">
+  <meta property="og:description" content="3rd-year Computer Engineering student, Cybersecurity SIG Coordinator, 2nd nationally at CSCG 2026. Available Summer 2026 — SF / Munich / Zurich.">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Giorgos Kandilas — Security Engineer">
+  <meta name="twitter:description" content="3rd-year Computer Engineering student, Cybersecurity SIG Coordinator, 2nd nationally at CSCG 2026. Available Summer 2026.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon"          href="favicon.svg">
+  <meta name="theme-color" content="#0b0b10">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three":        "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Georgios Kandilas",
+    "alternateName": "Giorgos Kandilas",
+    "url": "https://kdngiorgos.github.io",
+    "email": "kdngiorgos@gmail.com",
+    "jobTitle": "Computer Engineering Student",
+    "alumniOf": { "@type": "EducationalOrganization", "name": "CEID — University of Patras" },
+    "sameAs": ["https://github.com/kdngiorgos", "https://linkedin.com/in/kdngiorgos/"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">kdngiorgos<span class="cursor">_</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">01. About</a></li>
-                <li><a href="#projects">02. Projects</a></li>
-                <li><a href="#contact">03. Contact</a></li>
-            </ul>
-        </nav>
 
-        <header class="hero">
-            <p class="hi">Hi, my name is</p>
-            <h1 class="name">Giorgos Kandilas.</h1>
-            <h2 class="subtitle">I like computers</h2>
-            <p class="description">
-                I'm a Computer Engineering student and Cybersecurity enthusiast. 
-            </p>
-            
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Looking for Internship Opportunities
-            </div>
+<!-- ── Loader ─────────────────────────────── -->
+<div id="loader" role="status" aria-label="Loading">
+  <div class="loader-inner">
+    <svg class="loader-logo" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="26,4 46,15 46,37 26,48 6,37 6,15" fill="none" stroke="#7c5cff" stroke-width="1.5"/>
+      <polygon points="26,10 40,19 40,33 26,42 12,33 12,19" fill="none" stroke="#7c5cff" stroke-width="1" opacity="0.4"/>
+      <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
+            font-family="Inter, sans-serif" font-weight="800" font-size="13" fill="#e8e8f0">kG</text>
+    </svg>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
 
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary">Get In Touch</a>
-                <a href="https://github.com/kdngiorgos" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </header>
+<!-- ── Nav ───────────────────────────────── -->
+<header id="navbar" role="banner">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home">
+      <span class="mono">kG</span><span class="cursor" aria-hidden="true">_</span>
+    </a>
 
-        <section id="about" class="section">
-            <h3 class="section-title"><span>01.</span> About Me</h3>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Hello! I'm Giorgos, also known as <span class="highlight">kdngiorgos</span>. I enjoy exploring the depths of computer systems and understanding how they work at a low level.
-                    </p>
-                    <p>
-                        Currently, I am pursuing my degree in <strong>Computer Engineering</strong> while actively self-studying <strong>Cybersecurity</strong>. My goal is to bridge the gap between software development and security engineering.
-                    </p>
-                    <p>Here are some technologies and topics I've been working with recently:</p>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-caret-right"></i> Python & C/C++</li>
-                        <li><i class="fas fa-caret-right"></i> Linux Administration</li>
-                        <li><i class="fas fa-caret-right"></i> Full-Stack Development</li>
-                        <li><i class="fas fa-caret-right"></i> Homelabbing</li>
-                    </ul>
-                </div>
-                <div class="about-img">
-                    <div class="img-wrapper">
-                        <!-- Placeholder for profile image, using a techy icon for now -->
-                        <i class="fas fa-user-secret profile-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <ul class="nav-links" role="list">
+      <li><a href="#about"      class="nav-link"><span class="mono accent">01.</span> About</a></li>
+      <li><a href="#skills"     class="nav-link"><span class="mono accent">02.</span> Skills</a></li>
+      <li><a href="#experience" class="nav-link"><span class="mono accent">03.</span> Experience</a></li>
+      <li><a href="#projects"   class="nav-link"><span class="mono accent">04.</span> Projects</a></li>
+      <li><a href="#contact"    class="nav-link"><span class="mono accent">05.</span> Contact</a></li>
+    </ul>
 
-        <section id="projects" class="section">
-            <h3 class="section-title"><span>02.</span> Some Things I've Built So Far</h3>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-top">
-                        <i class="far fa-folder folder-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/demetraapp/demetraapp" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h4 class="project-title">Demetra App</h4>
-                    <div class="project-desc">
-                        <p>A full-stack web application designed for farmers and agronomists to monitor field data and get crop recommendations</p>
-                    </div>
-                    <ul class="project-tech">
-                        <li>NodeJS FrontEnd</li>
-                        <li>Python Backend</li>
-                        <li>MongoDB Database</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <a href="resume.pdf" class="btn btn-sm btn-outline" target="_blank" rel="noopener" aria-label="View resume PDF">
+      Resume
+    </a>
 
-        <section id="contact" class="section contact-section">
-            <h3 class="section-title"><span>03.</span> What's Next?</h3>
-            <h2 class="contact-title">Get In Touch</h2>
-            <p class="contact-desc">
-                I am currently looking for <strong>Internship opportunities</strong>. Whether you have a question, a job offer, or just want to say hi, I'll try my best to get back to you!
-            </p>
-            <a href="mailto:kdngiorgos@gmail.com" class="btn primary big-btn">Say Hello</a>
-            
-            <div class="social-links">
-                <a href="https://github.com/kdngiorgos" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kdngiorgos/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/kdngiorgos/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </section>
+    <button class="hamburger" id="hamburger"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        <footer>
-            <p>Designed & Built by Giorgos Kandilas</p>
-        </footer>
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about"      class="mobile-nav-link"><span class="mono accent">01.</span> About</a></li>
+      <li><a href="#skills"     class="mobile-nav-link"><span class="mono accent">02.</span> Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link"><span class="mono accent">03.</span> Experience</a></li>
+      <li><a href="#projects"   class="mobile-nav-link"><span class="mono accent">04.</span> Projects</a></li>
+      <li><a href="#contact"    class="mobile-nav-link"><span class="mono accent">05.</span> Contact</a></li>
+    </ul>
+    <a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Resume ↗</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Hero ─────────────────────────────── -->
+  <section id="hero" aria-label="Introduction">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="mono hero-eyebrow">// security.engineer.init()</p>
+      <h1 class="hero-name">Giorgos<br>Kandilas.</h1>
+      <p class="hero-tagline">Building secure systems from first principles.</p>
+      <p class="hero-desc">
+        3rd-year Computer Engineering student at the University of Patras.
+        Coordinator of the Cybersecurity SIG, CTF competitor, homelab tinkerer.
+        Looking for a security engineering internship — SF is the dream.
+      </p>
+      <div class="hero-badges">
+        <span class="badge badge-green">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Available · Summer 2026
+        </span>
+        <span class="badge badge-amber">SF · Munich · Zurich</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Get In Touch</a>
+        <a href="resume.pdf" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Resume ↗</a>
+        <a href="https://github.com/kdngiorgos" class="btn-link" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
+        </a>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ── About ─────────────────────────────── -->
+  <section id="about" class="section" aria-label="About me">
+    <div class="container">
+      <h2 class="section-heading reveal"><span class="mono accent">01.</span> About</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a Computer Engineering student at
+            <strong>CEID, University of Patras</strong>, entering my 3rd year in
+            autumn 2026. My focus is security engineering — I want to understand
+            systems deeply enough to know exactly how they break, and then build
+            them so they don't.
+          </p>
+          <p>
+            I coordinate the <strong>Cybersecurity SIG</strong> at our ACM Student Chapter
+            and serve as Executive Member and Treasurer of the chapter itself.
+            Outside of that, I run a homelab, compete in CTFs on Hack The Box,
+            and recently placed <strong>2nd nationally</strong> at the
+            <strong>Cybersecurity Challenge Greece 2026</strong> — winning an
+            LPI Security Essentials exam voucher in the process.
+          </p>
+          <p>
+            I hold a <strong>8.7/10 GPA</strong>, placed 2nd nationally in the
+            Greek university entrance exams, and — in a very different arena — I'm
+            a national weightlifting champion from high school. I like pushing limits.
+          </p>
+          <p>
+            I'm targeting <strong>Security Engineering internships</strong> for Summer 2026.
+            San Francisco is the dream; Munich and Zurich are strong alternatives.
+            Open to relocation anywhere interesting.
+          </p>
+          <ul class="skills-inline" aria-label="Quick skills">
+            <li class="mono">Python &amp; C/C++</li>
+            <li class="mono">Linux Administration</li>
+            <li class="mono">Network Security</li>
+            <li class="mono">Penetration Testing</li>
+            <li class="mono">Full-Stack Dev</li>
+            <li class="mono">CTF / Exploitation</li>
+          </ul>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="about-photo-wrap">
+            <img src="me.jpg" alt="Giorgos Kandilas" class="about-photo" loading="lazy">
+          </div>
+          <div class="terminal-card" aria-label="Profile at a glance">
+            <div class="terminal-bar">
+              <span class="dot dot-red"    aria-hidden="true"></span>
+              <span class="dot dot-yellow" aria-hidden="true"></span>
+              <span class="dot dot-green2" aria-hidden="true"></span>
+              <span class="terminal-title mono">giorgos.json</span>
+            </div>
+            <pre class="terminal-body mono"><code>{
+  "gpa": <span class="t-a">8.7 / 10</span>,
+  "ctf": <span class="t-v">"CSCG 2nd nationally"</span>,
+  "sig": <span class="t-v">"ACM Cybersec Coord."</span>,
+  "target": <span class="t-a">"SF / Munich / Zurich"</span>,
+  "available": <span class="t-g">true</span>,
+  "fun_fact": <span class="t-a">"🏋️ national champion"</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ────────────────────────────── -->
+  <section id="skills" class="section" aria-label="Skills">
+    <div class="container">
+      <h2 class="section-heading reveal"><span class="mono accent">02.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Languages</h3>
+          <ul class="skill-tags" role="list">
+            <li>Python</li>
+            <li>C / C++</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Bash / Shell</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Security</h3>
+          <ul class="skill-tags" role="list">
+            <li>Penetration Testing</li>
+            <li>CTF / Exploitation</li>
+            <li>Network Security</li>
+            <li>Linux Hardening</li>
+            <li>Vuln Assessment</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Systems</h3>
+          <ul class="skill-tags" role="list">
+            <li>Linux Administration</li>
+            <li>Self-Hosted Infra</li>
+            <li>Docker</li>
+            <li>Networking</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Tools</h3>
+          <ul class="skill-tags" role="list">
+            <li>Wireshark</li>
+            <li>Burp Suite</li>
+            <li>Git</li>
+            <li>Flex / Bison</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ────────────────────────── -->
+  <section id="experience" class="section" aria-label="Experience and achievements">
+    <div class="container">
+      <h2 class="section-heading reveal"><span class="mono accent">03.</span> Experience</h2>
+
+      <div class="achievements-row reveal" aria-label="Key achievements">
+        <div class="achievement">
+          <span class="ach-icon" aria-hidden="true">🏆</span>
+          <div>
+            <strong class="ach-strong">2nd Place Nationally</strong>
+            <span class="ach-sub">Cybersecurity Challenge Greece 2026</span>
+          </div>
+        </div>
+        <div class="achievement">
+          <span class="ach-icon" aria-hidden="true">📚</span>
+          <div>
+            <strong class="ach-strong">8.7 / 10 GPA</strong>
+            <span class="ach-sub">CEID, University of Patras</span>
+          </div>
+        </div>
+        <div class="achievement">
+          <span class="ach-icon" aria-hidden="true">🥇</span>
+          <div>
+            <strong class="ach-strong">National Champion</strong>
+            <span class="ach-sub">Weightlifting — High School</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <article class="timeline-item reveal" role="listitem">
+          <div class="tl-meta">
+            <span class="tl-date mono">2025 — present</span>
+            <span class="tl-company">ACM · University of Patras</span>
+          </div>
+          <div class="tl-body">
+            <h3>Coordinator, Cybersecurity SIG</h3>
+            <p class="tl-sub">+ Executive Member &amp; Treasurer, ACM Student Chapter</p>
+            <p>
+              Lead and coordinate the Cybersecurity special interest group —
+              organising CTF sessions, workshops, and mentoring members on
+              offensive/defensive security. Manage chapter finances as Treasurer
+              and contribute to executive decision-making for the broader ACM chapter.
+            </p>
+            <ul class="tl-tags">
+              <li>CTF</li><li>Mentoring</li><li>Leadership</li><li>Event Org</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" role="listitem">
+          <div class="tl-meta">
+            <span class="tl-date mono">Apr – May 2026</span>
+            <span class="tl-company">Sacred Byte GmbH · Remote</span>
+          </div>
+          <div class="tl-body">
+            <h3>IT Admin / Helpdesk Systems Analyst</h3>
+            <p>
+              Led internal evaluation of helpdesk platforms (Freshdesk, Zoho Desk),
+              wrote technical documentation, designed support workflows, and liaised
+              with vendors to inform the platform selection decision.
+            </p>
+            <ul class="tl-tags">
+              <li>IT Admin</li><li>Tech Writing</li><li>Workflow Design</li><li>Remote</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" role="listitem">
+          <div class="tl-meta">
+            <span class="tl-date mono">Sep 2025 – Jan 2026</span>
+            <span class="tl-company">PwC Greece</span>
+          </div>
+          <div class="tl-body">
+            <h3>Software Engineering Academy</h3>
+            <p>
+              Completed a 4-month structured software engineering programme at PwC —
+              covering full-stack development practices, collaborative workflows,
+              and enterprise engineering standards.
+            </p>
+            <ul class="tl-tags">
+              <li>Full-Stack</li><li>Agile</li><li>PwC</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" role="listitem">
+          <div class="tl-meta">
+            <span class="tl-date mono">2024 – Jun 2026</span>
+            <span class="tl-company">Self-employed</span>
+          </div>
+          <div class="tl-body">
+            <h3>Freelance CS Tutor</h3>
+            <p>
+              Provided one-on-one Computer Science tutoring to high school and
+              university students — programming fundamentals, algorithms,
+              data structures, and exam preparation.
+            </p>
+            <ul class="tl-tags">
+              <li>Python</li><li>Algorithms</li><li>Teaching</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ──────────────────────────── -->
+  <section id="projects" class="section" aria-label="Projects">
+    <div class="container">
+      <h2 class="section-heading reveal"><span class="mono accent">04.</span> Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="proj-top">
+            <i class="fas fa-seedling proj-icon" aria-hidden="true"></i>
+            <div class="proj-links">
+              <a href="https://github.com/demetraapp/demetraapp" target="_blank" rel="noopener" aria-label="Demetra App on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Demetra Agro App</h3>
+          <p class="project-desc">
+            Community agri-tech mobile app concept built with a team. A genuine learning
+            experience in collaborative full-stack product development — from architecture
+            to MVP scoping. Explored real-world challenges of shipping a product.
+          </p>
+          <ul class="proj-tags">
+            <li>Node.js</li><li>Python</li><li>MongoDB</li><li>Mobile</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="proj-top">
+            <i class="fas fa-database proj-icon" aria-hidden="true"></i>
+            <div class="proj-links">
+              <a href="https://github.com/kdngiorgos/CEID" target="_blank" rel="noopener" aria-label="CEID coursework on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">mySQLq Parser</h3>
+          <p class="project-desc">
+            Compiler-level SQL parser built for the Compilers course at CEID.
+            Implemented in C using Flex for lexical analysis and Bison for grammar
+            rules. Demonstrates depth in systems programming and language theory.
+          </p>
+          <ul class="proj-tags">
+            <li>C</li><li>Flex</li><li>Bison</li><li>Compilers</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="proj-top">
+            <i class="fas fa-server proj-icon" aria-hidden="true"></i>
+            <div class="proj-links"></div>
+          </div>
+          <h3 class="project-title">Homelab</h3>
+          <p class="project-desc">
+            Self-hosted infrastructure spanning multiple machines — a hands-on
+            environment for sysadmin practice, network configuration,
+            containerisation, and running security tooling in a controlled environment.
+          </p>
+          <ul class="proj-tags">
+            <li>Linux</li><li>Docker</li><li>Networking</li><li>Self-Hosted</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="proj-top">
+            <i class="fas fa-shield-halved proj-icon" aria-hidden="true"></i>
+            <div class="proj-links">
+              <a href="https://github.com/kdngiorgos/Cybersecurity-SIG" target="_blank" rel="noopener" aria-label="Cybersecurity SIG on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Cybersecurity SIG</h3>
+          <p class="project-desc">
+            Open notes and material from the Cybersecurity SIG I coordinate at
+            the ACM Student Chapter — covering network security, web exploitation,
+            and CTF methodology. Written to help students get into the field.
+          </p>
+          <ul class="proj-tags">
+            <li>CTF</li><li>Education</li><li>Security</li><li>Open Source</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────── -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="contact-wrap">
+      <span class="contact-eyebrow mono reveal">05. What's Next?</span>
+      <h2 class="contact-heading reveal">Get In Touch.</h2>
+      <p class="contact-desc reveal">
+        I'm actively looking for <strong>Security Engineering internships</strong>
+        for Summer 2026 — primary target San Francisco, with Munich and Zurich as
+        strong alternatives. If you're working on something interesting, or just
+        want to talk security, systems, or CTFs, I'd love to hear from you.
+      </p>
+      <a href="mailto:kdngiorgos@gmail.com" class="btn btn-primary btn-lg contact-btn reveal">
+        Say Hello ↗
+      </a>
+      <div class="contact-socials reveal">
+        <a href="https://linkedin.com/in/kdngiorgos/" target="_blank" rel="noopener" class="contact-social">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="https://github.com/kdngiorgos" target="_blank" rel="noopener" class="contact-social">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container footer-inner">
+    <p class="footer-credit mono">Designed &amp; Built by Giorgos Kandilas</p>
+    <div class="footer-icons">
+      <a href="https://github.com/kdngiorgos"       target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://linkedin.com/in/kdngiorgos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:kdngiorgos@gmail.com"          aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script type="module">
+  try {
+    const { initScene } = await import('./scene.js');
+    const canvas = document.getElementById('hero-canvas');
+    if (canvas) initScene(canvas);
+  } catch (err) {
+    console.warn('3D scene unavailable:', err);
+  } finally {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      document.body.classList.add('scene-loaded');
+    }));
+  }
+</script>
+
 </body>
 </html>
